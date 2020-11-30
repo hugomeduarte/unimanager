@@ -14,6 +14,18 @@ public abstract class Person {
             this.birthDay=birthDay;
         }
 
+        public String getName() {
+            return name;
+        }
+    
+        public LocalDate getBirthDate() {
+            return birthDay;
+        }
+    
+        public char getGender() {
+            return gender;
+        }
+
     public abstract String getReference();
 
 }

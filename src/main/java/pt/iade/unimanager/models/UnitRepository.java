@@ -8,9 +8,9 @@ public class UnitRepository {
 
     public static void populate() {
        
-        units.add(new Unit(1,"a",3));
-        units.add(new Unit(2,"b",4));
-        units.add(new Unit(3,"c", 5));
+        units.add(new Unit(1,"Mat",3));
+        units.add(new Unit(2,"Hist",4));
+        units.add(new Unit(3,"Progr", 5));
        
     }
 

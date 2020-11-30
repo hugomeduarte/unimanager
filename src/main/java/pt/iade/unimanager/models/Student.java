@@ -5,15 +5,12 @@ import java.util.ArrayList;
 public class Student extends Person {
 
 private static int nextNumber = 0;
-private String name;
-private LocalDate birthDate;
 private String email;
-private char gender;
 private int number;
 private ArrayList<Unit> units;
 private ArrayList<Enrolment> enrolments;
 
-public Student(String name, LocalDate birthDate, char gender) { 
+public Student(String name,char gender, LocalDate birthDate) { 
     super(name,gender,birthDate);
     this.number = nextNumber; 
     nextNumber++;
@@ -24,18 +21,6 @@ public Student(String name, LocalDate birthDate, char gender) {
 
     public static int getNextNumber() {
         return nextNumber;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
-
-    public char getGender() {
-        return gender;
     }
 
     public int getNumber() {
@@ -76,11 +61,11 @@ public void enroll(Enrolment enrolment) {
 
 }
 
-
 @Override
     public String getReference() {
         return "S<"+number+">";
 }
+
 
 
 

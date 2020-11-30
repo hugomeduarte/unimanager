@@ -10,8 +10,8 @@ public class TeacherRepository {
     public static void populate() {
       
         teachers.add(new Teacher("Mary", LocalDate.parse("1999-12-23"), 'F'));
-        teachers.add(new Teacher("João", LocalDate.parse("1999-12-20"), 'M'));
-        teachers.add(new Teacher("Mário", LocalDate.parse("1999-12-24"), 'M'));
+        teachers.add(new Teacher("Joao", LocalDate.parse("1999-12-20"), 'M'));
+        teachers.add(new Teacher("Mario", LocalDate.parse("1999-12-24"), 'M'));
         
     }
 
@@ -19,8 +19,17 @@ public class TeacherRepository {
         return teachers;
     }
 
+    public static Teacher getTeacher(int number) {
+
+        for (Teacher teacher:teachers) {
+            if(teacher.getMecNumber()==number)
+            return teacher; 
+        }
+        return null;
+    }
 
 
 
-    
+
+
 }
