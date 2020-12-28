@@ -28,8 +28,13 @@ public class TeacherRepository {
         return null;
     }
 
-
-
+    public static ArrayList<Unit> getUnitsFromTeacher(int number) {
+        for (Teacher teacher:teachers) {
+            if(teacher.getMecNumber()==number)
+            return teacher.getUnits(); 
+        }
+        return null;
+    }
 
 
 }

@@ -33,7 +33,7 @@ public class PersonController {
         return persons;
     }
 
-/* contém erro
+/* 
 
 @GetMapping(path = "/search", produces= MediaType.APPLICATION_JSON_VALUE)
 public List<Person> searchPersons(@RequestParam(value = "name",defaultValue="") String name,
