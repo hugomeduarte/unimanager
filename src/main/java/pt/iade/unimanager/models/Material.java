@@ -1,11 +1,11 @@
 package pt.iade.unimanager.models;
 
 public class Material {
-    private String name;
-    private MaterialState state;
+    protected String name;
+    protected MaterialState state;
     public Material(String name) {
         this.name=name;
-        state=MaterialState.OK;
+        state= MaterialState.OK;
     }
     
     public String getName() {

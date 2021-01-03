@@ -8,8 +8,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,7 +15,6 @@ import javassist.NotFoundException;
 import pt.iade.unimanager.models.Teacher;
 import pt.iade.unimanager.models.TeacherRepository;
 import pt.iade.unimanager.models.Unit;
-import pt.iade.unimanager.models.UnitRepository;
 
 @RestController
 @RequestMapping(path="/api/teachers")

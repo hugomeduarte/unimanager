@@ -2,7 +2,7 @@ package pt.iade.unimanager.models;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Student extends Person {
+public class Student extends Person implements Statistical { 
 
 private static int nextNumber = 0;
 private String email;
@@ -56,7 +56,31 @@ public void enroll(Enrolment enrolment) {
         return "S<"+number+">";
 }
 
+@Override
+    public double getAverage(){
+        double sum = 0; int n = 0;
+        for(Enrolment enr: enrolments)
+        if(enr.getGrade() > 0){
+            n++;
+            sum += enr.getGrade();
+        }
+        return sum / n;
+    }
 
+    @Override
+    public double getMax(){
+        return 0;
+    }
+
+    @Override
+    public double getMin(){
+        return 0;
+    }
+
+    @Override
+    public HistogramSlot[] getHistogram(int nSlots) {
+        return null;
+    }
 
 
 
